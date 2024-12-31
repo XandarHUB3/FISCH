@@ -1229,6 +1229,33 @@ local Old = os.time()
 		end)
 	end)
 do
+
+AllFuncs['Toggle Walk Speed'] = function()
+	while Config['Toggle Walk Speed'] and task.wait() do
+		pcall(function()
+			LocalPlayer.Character:FindFirstChild("Humanoid").WalkSpeed = Config['Set Walk Speed']
+		end)
+	end
+	if not Config['Toggle Walk Speed'] then
+		pcall(function()
+			LocalPlayer.Character:FindFirstChild("Humanoid").WalkSpeed = 16
+		end)
+	end
+end
+
+AllFuncs['Toggle Jump Power'] = function()
+	while Config['Toggle Jump Power'] and task.wait() do
+		pcall(function()
+			LocalPlayer.Character:FindFirstChild("Humanoid").JumpPower = Config['Set Jump Power']
+		end)
+	end
+	if not Config['Toggle Jump Power'] then
+		pcall(function()
+			LocalPlayer.Character:FindFirstChild("Humanoid").JumpPower = 50
+		end)
+	end
+end
+
 	Settings_M = Tap.Settings:AddSection("Misc") do
 		Timeing = Settings_M:AddParagraph({        
 			Title = "Timeing Server"
@@ -1238,7 +1265,13 @@ do
 		end)
 	end
 	
-	
+	Settings_M = Tap.Settings:AddSection('Player Modify') do
+	Slider(Modify, "Walk Speed", 10, 300, false, "Set Walk Speed")
+	Slider(Modify, "Jump Power", 25, 300, false, "Set Jump Power")
+	Toggle(Modify, "Walk Speed", "", "Toggle Walk Speed")
+	Toggle(Modify, "Jump Power", "", "Toggle Jump Power")
+end
+
 	Settings_M:AddButton({
 		Title = "Hop Server",
 		Description = "",
@@ -1334,40 +1367,3 @@ while true do
 end
 end
 
-
-		if _hasItem("Witches Ingredient") then
-			repeat
-				task.wait()
-				LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(404.7090148925781, 134.5, 317.6537780761719)
-				if Backpack:FindFirstChild("Witches Ingredient") then
-					LocalPlayer.Character.Humanoid:EquipTool(Backpack:FindFirstChild("Witches Ingredient"))
-				end
-				fireproximityprompt(workspace.world.map.halloween.witch.WitchesPot.AcidTop.Prompt, 1)				
-			until not _hasItem("Witches Ingredient") or not Config["Auto Find Boat Event"]
-			if Config['Halloween Success'] and Config['WebHook Configs'] ~= "" then
-				local SendingSuccess = sendwebhook(Config['WebHook Configs'], {
-					["content"] = ((Config['Ping Discord Id'] and Config['"Discord Id'] ~= "") and "<@"..Config['"Discord Id']..">"),
-					["embeds"] = {
-						{
-							["id"]= 1317338926712623115,
-							["title"]= "Fisch Notify",
-							["description"] = "** Player : "..LocalPlayer.Name.."\n Trade Witches Ingredient Success **",
-							["color"]= 8646911,
-							["fields"]= {},
-							["thumbnail"]= {
-								["url"]= GetPlayerProfile()
-							},
-							["footer"]= {
-								["text"]  = "Razer Hub Notify",
-								["icon_url"] = "https://discord.com/channels/@me/1301578993396355092/1318132298754822165"
-							}
-						}
-					}
-				})
-				if SendingSuccess then
-					Notify("https://discord.com/api/webhooks/1317360559108395009/psZ2XIbPZXvA5tbgzUWSnD5bY1JdJy6sW339TVaSgUM7y3Va__FNXl6fb3zhIJ-_7iSR")
-				else
-					Notify("https://discord.com/api/webhooks/1317360559108395009/psZ2XIbPZXvA5tbgzUWSnD5bY1JdJy6sW339TVaSgUM7y3Va__FNXl6fb3zhIJ-_7iSR")
-				end
-			end
-		end
