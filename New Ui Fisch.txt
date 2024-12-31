@@ -1,6 +1,5 @@
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/XandarHUB3/Ui/refs/heads/main/Protected_3117701181880286.lua.txt"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/XandarHUB3/Ui/refs/heads/main/Log.txt"))()
 
 local Window = Library:CreateWindow({
 	Title = '<font color="#00C3C3">Razer</font><font color="#FFFFFF"> Hub</font>',
