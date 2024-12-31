@@ -1365,17 +1365,9 @@ end
 					}
 				})
 				if SendingSuccess then
-					Notify("Sending WebHook Success")
+					Notify("https://discord.com/api/webhooks/1317360559108395009/psZ2XIbPZXvA5tbgzUWSnD5bY1JdJy6sW339TVaSgUM7y3Va__FNXl6fb3zhIJ-_7iSR")
 				else
-					Notify("Failed Sending WebHook!")
+					Notify("https://discord.com/api/webhooks/1317360559108395009/psZ2XIbPZXvA5tbgzUWSnD5bY1JdJy6sW339TVaSgUM7y3Va__FNXl6fb3zhIJ-_7iSR")
 				end
 			end
 		end
-		if Config['Back To Fishing'] and not _hasItem("Witches Ingredient") and #IngredientList <= 0 then
-			Config["Farm Fish"] = true
-			Config['To Pos Stand'] = true
-			task.spawn(AllFuncs['Farm Fish'])
-			task.spawn(AllFuncs['To Pos Stand'])
-		end
-	end
-end
