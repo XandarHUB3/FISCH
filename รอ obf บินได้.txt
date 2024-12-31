@@ -854,6 +854,41 @@ Shoppy = Tap.Shop:AddSection('Rod')
 })
 
 Shoppy:AddButton({
+    Title = "Candy Cane Rod (new)",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-185.5498046875, 366.8877868652344, -9441.859375)
+	end
+})
+
+Shoppy:AddButton({
+    Title = "Arctic Rod Rod (new)",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(19577.20703125, 132.67010498046875, 5301.73095703125)
+	end
+})
+
+Shoppy:AddButton({
+    Title = "Avalanche Rod (new)",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(19770.69921875,415.43707275390625,5411.7998046875)
+    end
+})
+
+Shoppy:AddButton({
+    Title = "Summit Rod (new)",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(20212.5, 736.6688232421875, 5708.5)
+    end
+})
+
+Shoppy:AddButton({
+    Title = "Heaven's Rod (new)",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(20042.443359375, -464.0634765625, 7144.2470703125)
+    end
+})
+
+Shoppy:AddButton({
     Title = "Phoenix Rod",
     Callback = function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5965.21142578125, 269.6245422363281, 848.4652099609375)
