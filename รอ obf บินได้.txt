@@ -1324,32 +1324,6 @@ while true do
 end
 end
 
-AllFuncs['Toggle Walk Speed'] = function()
-	while Config['Toggle Walk Speed'] and task.wait() do
-		pcall(function()
-			LocalPlayer.Character:FindFirstChild("Humanoid").WalkSpeed = Config['Set Walk Speed']
-		end)
-	end
-	if not Config['Toggle Walk Speed'] then
-		pcall(function()
-			LocalPlayer.Character:FindFirstChild("Humanoid").WalkSpeed = 16
-		end)
-	end
-end
-
-AllFuncs['Toggle Jump Power'] = function()
-	while Config['Toggle Jump Power'] and task.wait() do
-		pcall(function()
-			LocalPlayer.Character:FindFirstChild("Humanoid").JumpPower = Config['Set Jump Power']
-		end)
-	end
-	if not Config['Toggle Jump Power'] then
-		pcall(function()
-			LocalPlayer.Character:FindFirstChild("Humanoid").JumpPower = 50
-		end)
-	end
-end
-
 	Settings_M = Tap.Settings:AddSection("Misc") do
 		Timeing = Settings_M:AddParagraph({        
 			Title = "Timeing Server"
@@ -1358,10 +1332,3 @@ end
 			writefile(tostring(LocalPlayer.UserId).."ALC.txt", tostring(v))
 		end)
 	end
-
-Modify = Tap.Settings:AddSection('Player Modify') do
-	Slider(Modify, "Walk Speed", 10, 300, false, "Set Walk Speed")
-	Slider(Modify, "Jump Power", 25, 300, false, "Set Jump Power")
-	Toggle(Modify, "Walk Speed", "", "Toggle Walk Speed")
-	Toggle(Modify, "Jump Power", "", "Toggle Jump Power")
-end
