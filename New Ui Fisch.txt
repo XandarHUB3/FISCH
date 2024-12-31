@@ -1,5 +1,5 @@
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/XandarHUB3/Ui/refs/heads/main/Ui.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/XandarHUB3/Ui/refs/heads/main/Protected_3117701181880286.lua.txt"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/XandarHUB3/Ui/refs/heads/main/Log.txt"))()
 
 local Window = Library:CreateWindow({
