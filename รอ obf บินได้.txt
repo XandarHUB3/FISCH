@@ -1359,7 +1359,7 @@ end
 							},
 							["footer"]= {
 								["text"]  = "Razer Hub Notify",
-								["icon_url"] = "https://cdn.discordapp.com/attachments/971367335405449246/1259442279672844308/Profile_1.png?ex=66fbc206&is=66fa7086&hm=0b8898eb98938e100ad3cede12d0a526d344cd3ba7d4f737f728ca188a1af027&"
+								["icon_url"] = "https://discord.com/channels/@me/1301578993396355092/1318132298754822165"
 							}
 						}
 					}
