@@ -21,19 +21,10 @@ Section2:CreateToggle({
     Title = "This is a toggle",
     Value = false,
     Callback = function(value)
-        getgenv().Walk = value
-        task.spawn(function()
-            while getgenv().Walk do
-                task.wait()
-                pcall(function()
-                    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
-                end)
-            end
-            if not getgenv().Walk then
-                pcall(function()
-                    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-                end)
-            end
-        end)
+        if value then
+            print("UI TOGGLE ON")
+        else
+            print("UI TOGGLE OF")
+        end
     end
 })
